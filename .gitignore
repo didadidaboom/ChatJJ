@@ -1,0 +1,5 @@
+# Ignore the actual config file with sensitive information
+ChatJJ/Config.plist
+
+# Ignore Xcode configuration file with sensitive information
+Config.xconfig

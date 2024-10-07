@@ -1,5 +1,11 @@
 # ChatJJ
 
+<div id="language-switch">
+  <a href="#" onclick="switchLanguage()">Switch Language / 切换语言</a>
+</div>
+
+<div id="english-content">
+
 ChatJJ is an iOS application that provides a chat interface powered by AI. It allows users to interact with an AI assistant for various tasks and conversations.
 
 ## Features
@@ -52,3 +58,81 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+</div>
+
+<div id="chinese-content" style="display: none;">
+
+# ChatJJ
+
+ChatJJ 是一个由 AI 驱动的 iOS 聊天应用程序。它允许用户与 AI 助手进行各种任务和对话交互。
+
+## 功能特点
+
+- AI 驱动的聊天界面
+- 可自定义配置
+- 使用 Swift 和 SwiftUI 实现
+
+## 开始使用
+
+运行此项目需要：
+
+1. Xcode 13 或更高版本
+2. iOS 15.0+ 部署目标
+3. AI 服务的 API 密钥（不包含在仓库中）
+
+### 设置步骤
+
+1. 克隆仓库：
+   ```
+   git clone https://github.com/yourusername/ChatJJ.git
+   ```
+
+2. 在 Xcode 中打开项目：
+   ```
+   cd ChatJJ
+   open ChatJJ.xcodeproj
+   ```
+
+3. 复制 `Config.example.plist` 文件并重命名为 `Config.plist`：
+   ```
+   cp ChatJJ/Config.example.plist ChatJJ/Config.plist
+   ```
+
+4. 编辑 `ChatJJ/Config.plist` 并添加您的 API 密钥。
+
+5. 复制 `Config.example.xconfig` 文件并重命名为 `Config.xconfig`：
+   ```
+   cp Config.example.xconfig ChatJJ/Configuration/Config.xconfig
+   ```
+
+6. 编辑 `ChatJJ/Configuration/Config.xconfig` 并添加您的配置设置。
+
+7. 在 Xcode 中构建并运行项目。
+
+## 贡献
+
+欢迎贡献！请随时提交 Pull Request。
+
+## 许可证
+
+本项目采用 [MIT 许可证](LICENSE)。
+
+</div>
+
+<script>
+function switchLanguage() {
+  var english = document.getElementById("english-content");
+  var chinese = document.getElementById("chinese-content");
+  if (Math.random() < 0.5) {
+    english.style.display = "block";
+    chinese.style.display = "none";
+  } else {
+    english.style.display = "none";
+    chinese.style.display = "block";
+  }
+}
+
+// Randomly choose initial language
+switchLanguage();
+</script>
